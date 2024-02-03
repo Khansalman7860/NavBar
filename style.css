@@ -1,0 +1,84 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-image: url(main.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+  background-color: #fff;
+  box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+nav li {
+  height: 50px;
+}
+nav a {
+  height: 100%;
+  padding: 0px 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+nav a:hover {
+  background-color: #f0f0f0;
+  color: darkblue;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.SideBar {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  z-index: 999;
+  height: 100vh;
+  width: 250px;
+  background-color: #fff;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0px 10px rgb(255, 255, 255, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* border: 2px solid red; */
+}
+
+.SideBar li {
+  width: 100%;
+}
+
+.menu-btn {
+  display: none;
+}
+@media (max-width: 800px) {
+  .hideSidebar {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .SideBar {
+    width: 100%;
+  }
+}
